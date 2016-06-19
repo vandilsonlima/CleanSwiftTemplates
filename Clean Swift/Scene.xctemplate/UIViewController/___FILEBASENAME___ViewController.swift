@@ -9,12 +9,12 @@ import UIKit
 
 protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerInput {
     
-    func displaySomething(viewModel: ___FILEBASENAMEASIDENTIFIER___ViewModel)
+    func displaySomething(viewModel: ___FILEBASENAMEASIDENTIFIER___.Action.ViewModel)
 }
 
 protocol ___FILEBASENAMEASIDENTIFIER___ViewControllerOutput {
     
-    func doSomething(request: ___FILEBASENAMEASIDENTIFIER___Request)
+    func doSomething(request: ___FILEBASENAMEASIDENTIFIER___.Action.Request)
 }
 
 class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBASENAMEASIDENTIFIER___ViewControllerInput {
@@ -43,13 +43,13 @@ class ___FILEBASENAMEASIDENTIFIER___ViewController: UIViewController, ___FILEBAS
     func doSomethingOnLoad() {
         // NOTE: Ask the Interactor to do some work
         
-        let request = ___FILEBASENAMEASIDENTIFIER___Request()
+        let request = ___FILEBASENAMEASIDENTIFIER___.Action.Request()
         output.doSomething(request)
     }
     
     // MARK: Display logic
     
-    func displaySomething(viewModel: ___FILEBASENAMEASIDENTIFIER___ViewModel) {
+    func displaySomething(viewModel: ___FILEBASENAMEASIDENTIFIER___.Action.ViewModel) {
         // NOTE: Display the result from the Presenter
         
         // nameTextField.text = viewModel.name
